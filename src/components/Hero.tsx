@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section id="home" className="hero-bg min-h-screen flex items-center relative pt-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto relative z-10 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start lg:items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left */}
           <div className="space-y-4 sm:space-y-6">
             <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full glass text-blue-300 text-xs sm:text-sm font-medium animate-fade-in-up">
@@ -12,7 +12,7 @@ export default function Hero() {
               <span className="line-clamp-1">Trusted Tax & Compliance Experts</span>
             </div>
 
-            <h1 className="text-3xl xs:text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight animate-fade-in-up delay-100">
+            <h1 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight animate-fade-in-up delay-100">
               Your Trusted Partner for{' '}
               <span className="text-gradient">Tax & Compliance</span> Solutions
             </h1>
@@ -52,8 +52,8 @@ export default function Hero() {
           </div>
 
           {/* Right - Visual */}
-          <div className="relative animate-fade-in-right delay-200 hidden lg:block">
-            <div className="relative w-full aspect-square max-w-md mx-auto">
+          <div className="relative animate-fade-in-right delay-200 hidden lg:flex lg:justify-center lg:items-center">
+            <div className="relative w-full aspect-square max-w-md">
               {/* Rotating ring */}
               <div className="absolute inset-0 rounded-full border-2 border-dashed border-blue-500/20 animate-spin" style={{ animationDuration: '20s' }}></div>
               <div className="absolute inset-8 rounded-full border-2 border-dashed border-green-500/20 animate-spin" style={{ animationDuration: '15s', animationDirection: 'reverse' }}></div>
