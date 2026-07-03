@@ -26,7 +26,7 @@ const services = [
   { icon: Award, title: 'MSME & Halal Certificate', desc: 'MSME registration and Halal certification assistance for businesses.' },
   { icon: BookOpen, title: 'Accounting & Bookkeeping', desc: 'Professional accounting and bookkeeping services to keep your finances organized.' },
   { icon: PenTool, title: 'DSC (Digital Signature)', desc: 'Digital Signature Certificate issuance and renewal for all your digital needs.' },
-  { icon: Layers, title: 'LLP, PVT, FIRM, SOCIETY Registrations', desc: 'Complete entity registration services for LLPs, Pvt Ltd, firms, and societies.' },
+  { icon: Layers, title: 'LLP, PVT, FIRM, SOCIETY Registrations', desc: 'Complete entity registration services for LLPs, Pvt. Ltd, firms, and societies.' },
   { icon: Barcode, title: 'Barcode & Trademark', desc: 'Barcode registration and trademark filing to protect your brand identity.' },
   { icon: Gavel, title: 'Appeals & Scrutiny', desc: 'Expert handling of income tax and GST appeals, scrutiny, and assessments.' },
   { icon: Landmark, title: 'Ministry of Company Affairs', desc: 'MCA filings, compliances, and ROC-related matters handled with expertise.' },
