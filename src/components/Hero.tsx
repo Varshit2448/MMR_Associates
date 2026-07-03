@@ -2,58 +2,58 @@ import { ArrowRight, FileText, ShieldCheck, TrendingUp, Sparkles } from 'lucide-
 
 export default function Hero() {
   return (
-    <section id="home" className="hero-bg min-h-screen flex items-center relative pt-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+    <section id="home" className="hero-bg min-h-screen flex items-center relative pt-20 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto relative z-10 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left */}
-          <div className="space-y-6">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-blue-300 text-sm font-medium animate-fade-in-up">
-              <Sparkles size={14} className="text-green-400" />
-              <span>Trusted Tax & Compliance Experts</span>
+          <div className="space-y-4 sm:space-y-6">
+            <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full glass text-blue-300 text-xs sm:text-sm font-medium animate-fade-in-up">
+              <Sparkles size={14} className="text-green-400 flex-shrink-0" />
+              <span className="line-clamp-1">Trusted Tax & Compliance Experts</span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight animate-fade-in-up delay-100">
+            <h1 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight animate-fade-in-up delay-100">
               Your Trusted Partner for{' '}
               <span className="text-gradient">Tax & Compliance</span> Solutions
             </h1>
 
-            <p className="text-slate-300 text-lg leading-relaxed max-w-xl animate-fade-in-up delay-200">
+            <p className="text-xs sm:text-sm lg:text-base text-slate-300 leading-relaxed max-w-xl animate-fade-in-up delay-200">
               MMR Associates delivers comprehensive tax consultancy, GST services, registrations, and accounting solutions with precision, integrity, and a commitment to your financial success.
             </p>
 
-            <div className="flex flex-wrap gap-4 animate-fade-in-up delay-300">
+            <div className="flex flex-col xs:flex-row flex-wrap gap-3 sm:gap-4 animate-fade-in-up delay-300 pt-2 sm:pt-0">
               <button
                 onClick={() => document.querySelector('#services')?.scrollIntoView({ behavior: 'smooth' })}
-                className="group flex items-center gap-2 bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-500 hover:to-green-500 text-white px-6 py-3 rounded-xl font-medium transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/30 cta-button"
+                className="group flex items-center justify-center xs:justify-start gap-2 bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-500 hover:to-green-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg sm:rounded-xl font-medium text-sm sm:text-base transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/30 cta-button w-full xs:w-auto"
               >
                 Explore Services
-                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                <ArrowRight size={16} className="sm:size-18 group-hover:translate-x-1 transition-transform flex-shrink-0" />
               </button>
               <button
                 onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
-                className="glass text-white px-6 py-3 rounded-xl font-medium hover:bg-white/15 transition-all duration-300"
+                className="glass text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg sm:rounded-xl font-medium text-sm sm:text-base hover:bg-white/15 transition-all duration-300 w-full xs:w-auto"
               >
                 Get a Consultation
               </button>
             </div>
 
-            <div className="flex flex-wrap gap-6 pt-6 animate-fade-in-up delay-400">
+            <div className="flex flex-col xs:flex-row flex-wrap gap-4 sm:gap-6 pt-4 sm:pt-6 animate-fade-in-up delay-400">
               {[
                 { icon: FileText, label: '15+ Services' },
                 { icon: ShieldCheck, label: '100% Compliance' },
                 { icon: TrendingUp, label: 'Expert Guidance' },
               ].map((item) => (
-                <div key={item.label} className="flex items-center gap-2 text-slate-300">
-                  <item.icon size={18} className="text-green-400" />
-                  <span className="text-sm font-medium">{item.label}</span>
+                <div key={item.label} className="flex items-center gap-2 text-slate-300 text-xs sm:text-sm">
+                  <item.icon size={16} className="sm:size-18 text-green-400 flex-shrink-0" />
+                  <span className="font-medium">{item.label}</span>
                 </div>
               ))}
             </div>
           </div>
 
           {/* Right - Visual */}
-          <div className="hidden lg:block relative animate-fade-in-right delay-200">
-            <div className="relative w-full aspect-square max-w-md mx-auto">
+          <div className="relative animate-fade-in-right delay-200 hidden lg:flex lg:justify-center lg:items-center">
+            <div className="relative w-full aspect-square max-w-md">
               {/* Rotating ring */}
               <div className="absolute inset-0 rounded-full border-2 border-dashed border-blue-500/20 animate-spin" style={{ animationDuration: '20s' }}></div>
               <div className="absolute inset-8 rounded-full border-2 border-dashed border-green-500/20 animate-spin" style={{ animationDuration: '15s', animationDirection: 'reverse' }}></div>
@@ -95,12 +95,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden sm:block">
-        <div className="w-6 h-10 rounded-full border-2 border-white/30 flex justify-center pt-2">
-          <div className="w-1 h-2 rounded-full bg-white/60 animate-bounce"></div>
-        </div>
-      </div>
     </section>
   );
 }

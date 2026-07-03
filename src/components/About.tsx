@@ -17,32 +17,32 @@ const highlights = [
 
 export default function About() {
   return (
-    <section id="about" className="py-20 lg:py-28 bg-slate-50 relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-72 h-72 bg-blue-100 rounded-full blur-3xl opacity-50"></div>
-      <div className="absolute bottom-0 left-0 w-72 h-72 bg-green-100 rounded-full blur-3xl opacity-50"></div>
+    <section id="about" className="py-12 sm:py-16 md:py-20 lg:py-28 bg-slate-50 relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-48 sm:w-72 h-48 sm:h-72 bg-blue-100 rounded-full blur-3xl opacity-30 sm:opacity-50"></div>
+      <div className="absolute bottom-0 left-0 w-48 sm:w-72 h-48 sm:h-72 bg-green-100 rounded-full blur-3xl opacity-30 sm:opacity-50"></div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16 reveal">
-          <div className="inline-block px-4 py-1.5 rounded-full bg-blue-100 text-blue-700 text-sm font-medium mb-4">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8 relative z-10">
+        <div className="text-center mb-8 sm:mb-12 md:mb-16 reveal px-2">
+          <div className="inline-block px-3 sm:px-4 py-1 sm:py-1.5 rounded-full bg-blue-100 text-blue-700 text-xs sm:text-sm font-medium mb-3 sm:mb-4">
             About Us
           </div>
-          <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">
+          <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-3 sm:mb-4">
             Who We Are at <span className="text-gradient">MMR Associates</span>
           </h2>
-          <p className="text-slate-600 max-w-2xl mx-auto text-lg">
+          <p className="text-slate-600 max-w-2xl mx-auto text-xs sm:text-sm md:text-base lg:text-lg">
             A dedicated tax consultancy firm offering a comprehensive range of financial, tax, and compliance services tailored to meet the needs of businesses and individuals alike.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center mb-8 sm:mb-12 md:mb-16">
           <div className="reveal-left">
-            <h3 className="text-2xl font-bold text-slate-900 mb-6">
+            <h3 className="text-lg xs:text-xl sm:text-2xl font-bold text-slate-900 mb-4 sm:mb-6">
               Your One-Stop Solution for All Tax & Compliance Needs
             </h3>
-            <p className="text-slate-600 mb-6 leading-relaxed">
+            <p className="text-slate-600 text-xs sm:text-sm md:text-base mb-4 sm:mb-6 leading-relaxed">
               At MMR Associates, we understand that navigating the complex landscape of tax regulations, registrations, and compliance can be overwhelming. Our team of experienced professionals is committed to providing you with seamless, hassle-free services that keep you compliant while saving you time and money.
             </p>
-            <div className="grid sm:grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
               {highlights.map((item, i) => (
                 <div
                   key={item}

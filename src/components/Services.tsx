@@ -34,37 +34,37 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-20 lg:py-28 bg-white relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16 reveal">
-          <div className="inline-block px-4 py-1.5 rounded-full bg-green-100 text-green-700 text-sm font-medium mb-4">
+    <section id="services" className="py-12 sm:py-16 md:py-20 lg:py-28 bg-white relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8 relative z-10">
+        <div className="text-center mb-8 sm:mb-12 md:mb-16 reveal px-2">
+          <div className="inline-block px-3 sm:px-4 py-1 sm:py-1.5 rounded-full bg-green-100 text-green-700 text-xs sm:text-sm font-medium mb-3 sm:mb-4">
             Our Services
           </div>
-          <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">
+          <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-3 sm:mb-4">
             Comprehensive <span className="text-gradient">Tax & Compliance</span> Solutions
           </h2>
-          <p className="text-slate-600 max-w-2xl mx-auto text-lg">
+          <p className="text-slate-600 max-w-2xl mx-auto text-xs sm:text-sm md:text-base lg:text-lg">
             From tax filings to registrations and compliance, we offer a complete suite of services to keep your business running smoothly.
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
           {services.map((service, i) => (
             <div
               key={service.title}
-              className={`service-card reveal stagger-${(i % 8) + 1} group relative bg-white rounded-2xl p-6 border border-slate-200 hover:border-blue-300 hover:shadow-2xl hover:shadow-blue-100 cursor-pointer overflow-hidden`}
+              className={`service-card reveal stagger-${(i % 8) + 1} group relative bg-white rounded-lg sm:rounded-2xl p-4 sm:p-6 border border-slate-200 hover:border-blue-300 hover:shadow-2xl hover:shadow-blue-100 cursor-pointer overflow-hidden transition-all duration-300`}
             >
               <div className="relative z-10">
-                <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-blue-50 to-green-50 group-hover:from-blue-600 group-hover:to-green-600 transition-all duration-400 mb-5">
+                <div className="inline-flex items-center justify-center w-12 sm:w-14 h-12 sm:h-14 rounded-lg sm:rounded-xl bg-gradient-to-br from-blue-50 to-green-50 group-hover:from-blue-600 group-hover:to-green-600 transition-all duration-400 mb-3 sm:mb-5">
                   <service.icon
-                    size={26}
-                    className="text-blue-600 group-hover:text-white transition-colors duration-400"
+                    size={22}
+                    className="sm:size-26 text-blue-600 group-hover:text-white transition-colors duration-400"
                   />
                 </div>
-                <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-700 transition-colors duration-300">
+                <h3 className="text-base sm:text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-700 transition-colors duration-300 line-clamp-2">
                   {service.title}
                 </h3>
-                <p className="text-slate-600 text-sm leading-relaxed">{service.desc}</p>
+                <p className="text-slate-600 text-xs sm:text-sm leading-relaxed line-clamp-3 sm:line-clamp-none">{service.desc}</p>
               </div>
 
               {/* Hover gradient bar */}

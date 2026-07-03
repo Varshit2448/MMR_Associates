@@ -66,7 +66,7 @@ const knowledgeBase: { keywords: string[]; response: string }[] = [
   },
   {
     keywords: ['contact', 'reach', 'phone', 'email', 'address'],
-    response: 'You can reach MMR Associates at:\nPhone: 8106130227\nEmail: mmrassociates@gmail.com\nWe are available Monday to Saturday, 9 AM to 7 PM. Feel free to call or fill out the contact form on our website!',
+    response: 'You can reach MMR Associates at:\n\n📍 Head Office:\nH.No. 11-13-1383, Margadarshi Colony, Road No. 1, R.K. Puram, Saroor Nagar, Hyderabad\nPhone: 8106130227\n\n📍 Branch Office:\n#16-116/145/B, Mallareddy Nagar Colony, Bheeram Guda, R.C.Puram, Patancheru, Hyderabad\nPhone: 7893930931\n\nEmail: mmrassocieteshyd@gmail.com\nHours: Monday to Saturday, 9 AM to 7 PM\n\nFeel free to call or visit us!',
   },
   {
     keywords: ['hello', 'hi', 'hey', 'namaste', 'greetings'],
