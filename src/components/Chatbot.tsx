@@ -66,7 +66,7 @@ const knowledgeBase: { keywords: string[]; response: string }[] = [
   },
   {
     keywords: ['contact', 'reach', 'phone', 'email', 'address'],
-    response: 'You can reach MMR Associates at:\nPhone: 8106130227\nEmail: mmrassociates@gmail.com\nWe are available Monday to Saturday, 9 AM to 7 PM. Feel free to call or fill out the contact form on our website!',
+    response: 'You can reach MMR Associates at:\nPhone: 8106130227\nEmail: mmrassocieteshyd@gmail.com\nWe are available Monday to Saturday, 9 AM to 7 PM. Feel free to call or fill out the contact form on our website!',
   },
   {
     keywords: ['hello', 'hi', 'hey', 'namaste', 'greetings'],

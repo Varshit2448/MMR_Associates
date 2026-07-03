@@ -32,7 +32,7 @@ export default function Footer() {
               </div>
               <div>
                 <div className="text-white font-bold text-lg">MMR Associates</div>
-                <div className="text-blue-400 text-xs tracking-widest uppercase">Tax Consultants</div>
+                <div className="text-blue-400 text-xs tracking-widest uppercase">Tax Consultants, Auditors & Legal Advisors</div>
               </div>
             </div>
             <p className="text-sm leading-relaxed mb-4">
@@ -84,7 +84,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3 text-sm">
                 <Mail size={16} className="text-blue-400 flex-shrink-0" />
-                <a href="mailto:mmrassociates@gmail.com" className="hover:text-blue-400 transition-colors break-all">mmrassociates@gmail.com</a>
+                <a href="mailto:mmrassocieteshyd@gmail.com" className="hover:text-blue-400 transition-colors break-all">mmrassocieteshyd@gmail.com</a>
               </li>
               <li className="flex items-center gap-3 text-sm">
                 <MapPin size={16} className="text-blue-400 flex-shrink-0" />

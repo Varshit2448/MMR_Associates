@@ -16,7 +16,7 @@ export default function Contact() {
 
   const contactInfo = [
     { icon: Phone, label: 'Phone', value: '8106130227', href: 'tel:8106130227' },
-    { icon: Mail, label: 'Email', value: 'mmrassociates@gmail.com', href: 'mailto:mmrassociates@gmail.com' },
+    { icon: Mail, label: 'Email', value: 'mmrassocieteshyd@gmail.com', href: 'mailto:mmrassocieteshyd@gmail.com' },
     { icon: MapPin, label: 'Location', value: 'India', href: '#' },
     { icon: Clock, label: 'Hours', value: 'Mon - Sat: 9AM - 7PM', href: '#' },
   ];
