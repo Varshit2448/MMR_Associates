@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import { ThemeProvider } from './context/ThemeContext';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Stats from './components/Stats';
@@ -10,7 +9,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Chatbot from './components/Chatbot';
 
-function AppContent() {
+function App() {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -30,7 +29,7 @@ function AppContent() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white dark:bg-slate-950 overflow-x-hidden transition-colors duration-300">
+    <div className="min-h-screen bg-white overflow-x-hidden">
       <Navbar />
       <main>
         <Hero />
@@ -43,14 +42,6 @@ function AppContent() {
       <Footer />
       <Chatbot />
     </div>
-  );
-}
-
-function App() {
-  return (
-    <ThemeProvider>
-      <AppContent />
-    </ThemeProvider>
   );
 }
 

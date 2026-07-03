@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Phone, Moon, Sun } from 'lucide-react';
-import { useTheme } from '../context/ThemeContext';
+import { Menu, X, Phone } from 'lucide-react';
 
 const navLinks = [
   { label: 'Home', href: '#home' },
@@ -14,7 +13,6 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [active, setActive] = useState('Home');
-  const { isDark, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,7 +33,7 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? isDark ? 'bg-slate-950/95 backdrop-blur-lg shadow-2xl shadow-black/30 py-3' : 'bg-white/95 backdrop-blur-lg shadow-2xl shadow-black/10 py-3'
+          ? 'bg-slate-900/95 backdrop-blur-lg shadow-2xl shadow-black/30 py-3'
           : 'bg-transparent py-5'
       }`}
     >
@@ -70,15 +68,8 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* CTA & Theme Toggle */}
+          {/* CTA */}
           <div className="hidden md:flex items-center gap-3">
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-100 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors duration-300"
-              aria-label="Toggle theme"
-            >
-              {isDark ? <Sun size={18} /> : <Moon size={18} />}
-            </button>
             <a
               href="tel:8106130227"
               className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/30 cta-button"
@@ -88,23 +79,14 @@ export default function Navbar() {
             </a>
           </div>
 
-          {/* Mobile Theme Toggle & Menu */}
-          <div className="md:hidden flex items-center gap-2">
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-lg bg-slate-100/20 dark:bg-slate-800/20 text-white dark:text-slate-100 hover:bg-slate-100/30 dark:hover:bg-slate-800/30 transition-colors duration-300"
-              aria-label="Toggle theme"
-            >
-              {isDark ? <Sun size={18} /> : <Moon size={18} />}
-            </button>
-            <button
-              className="text-white dark:text-slate-100 p-2 rounded-lg hover:bg-white/10 transition-colors"
-              onClick={() => setMenuOpen(!menuOpen)}
-              aria-label="Toggle menu"
-            >
-              {menuOpen ? <X size={22} /> : <Menu size={22} />}
-            </button>
-          </div>
+          {/* Mobile Toggle */}
+          <button
+            className="md:hidden text-white p-2 rounded-lg hover:bg-white/10 transition-colors"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle menu"
+          >
+            {menuOpen ? <X size={22} /> : <Menu size={22} />}
+          </button>
         </div>
       </div>
 
