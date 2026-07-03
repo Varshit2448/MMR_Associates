@@ -75,7 +75,7 @@ export default function Navbar() {
               className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/30 cta-button"
             >
               <Phone size={14} />
-              <span>8106130227</span>
+              <span>Call or contact</span>
             </a>
           </div>
 
@@ -115,7 +115,7 @@ export default function Navbar() {
             className="flex items-center gap-2 mt-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white px-4 py-3 rounded-lg text-sm font-medium"
           >
             <Phone size={14} />
-            <span>Call: 8106130227</span>
+            <span>Call or contact</span>
           </a>
         </div>
       </div>
