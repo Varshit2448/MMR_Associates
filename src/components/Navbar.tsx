@@ -42,7 +42,7 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex items-center gap-2 sm:gap-3 group cursor-pointer flex-shrink-0" onClick={() => handleNavClick('Home', '#home')}>
             <img 
-              src="/mmr-logo.webp" 
+              src="/mmr-logo-3d.webp" 
               alt="MMR Associates Logo" 
               className="w-8 sm:w-10 h-8 sm:h-10 object-contain group-hover:opacity-80 transition-opacity duration-300"
             />

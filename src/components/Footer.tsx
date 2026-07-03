@@ -28,7 +28,7 @@ export default function Footer() {
           <div className="sm:col-span-2 md:col-span-1">
             <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
               <img 
-                src="/mmr-logo.webp" 
+                src="/mmr-logo-3d.webp" 
                 alt="MMR Associates Logo" 
                 className="w-8 sm:w-10 h-8 sm:h-10 object-contain flex-shrink-0"
               />
