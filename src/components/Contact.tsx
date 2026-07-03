@@ -17,8 +17,21 @@ export default function Contact() {
   const contactInfo = [
     { icon: Phone, label: 'Phone', value: '8106130227', href: 'tel:8106130227' },
     { icon: Mail, label: 'Email', value: 'mmrassocieteshyd@gmail.com', href: 'mailto:mmrassocieteshyd@gmail.com' },
-    { icon: MapPin, label: 'Location', value: 'India', href: '#' },
+    { icon: MapPin, label: 'Head Office', value: 'Hyderabad', href: '#' },
     { icon: Clock, label: 'Hours', value: 'Mon - Sat: 9AM - 7PM', href: '#' },
+  ];
+
+  const officeLocations = [
+    {
+      title: 'Head Office',
+      address: 'H.No. 11-13-1383, Margadarshi Colony, Road No. 1, R.K. Puram, Saroor Nagar, Hyderabad',
+      phone: '8106130227'
+    },
+    {
+      title: 'Branch Office',
+      address: '#16-116/145/B, Mallareddy Nagar Colony, Bheeram Guda, R.C.Puram, Patancheru, Hyderabad',
+      phone: '7893930931'
+    }
   ];
 
   return (
@@ -54,6 +67,25 @@ export default function Contact() {
                   <div className="text-slate-500 text-xs sm:text-sm font-medium mb-1">{info.label}</div>
                   <div className="text-slate-900 font-semibold text-xs sm:text-sm break-words">{info.value}</div>
                 </a>
+              ))}
+            </div>
+
+            {/* Office Locations */}
+            <div className="space-y-4">
+              {officeLocations.map((office, idx) => (
+                <div key={idx} className="bg-white rounded-lg sm:rounded-2xl p-4 sm:p-6 shadow-lg border border-slate-100">
+                  <div className="flex items-start gap-3 mb-3">
+                    <MapPin size={20} className="text-blue-600 flex-shrink-0 mt-0.5" />
+                    <div className="flex-1">
+                      <h4 className="font-bold text-slate-900 text-sm sm:text-base mb-1">{office.title}</h4>
+                      <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">{office.address}</p>
+                      <a href={`tel:${office.phone}`} className="text-blue-600 hover:text-blue-700 font-medium text-xs sm:text-sm mt-2 inline-flex items-center gap-1">
+                        <Phone size={14} />
+                        {office.phone}
+                      </a>
+                    </div>
+                  </div>
+                </div>
               ))}
             </div>
 

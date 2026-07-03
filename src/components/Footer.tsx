@@ -88,9 +88,21 @@ export default function Footer() {
                 <Mail size={14} className="sm:size-16 text-blue-400 flex-shrink-0" />
                 <a href="mailto:mmrassocieteshyd@gmail.com" className="hover:text-blue-400 transition-colors break-all">mmrassocieteshyd@gmail.com</a>
               </li>
-              <li className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm">
-                <MapPin size={14} className="sm:size-16 text-blue-400 flex-shrink-0" />
-                <span>India</span>
+              <li className="text-xs sm:text-sm">
+                <div className="flex items-start gap-2 sm:gap-3 mb-2">
+                  <MapPin size={14} className="sm:size-16 text-blue-400 flex-shrink-0 mt-0.5" />
+                  <div className="flex-1">
+                    <div className="font-medium text-blue-400">Head Office:</div>
+                    <div className="text-slate-400 text-xs">H.No. 11-13-1383, Margadarshi Colony, Road No. 1, R.K. Puram, Saroor Nagar, Hyderabad</div>
+                  </div>
+                </div>
+                <div className="flex items-start gap-2 sm:gap-3">
+                  <div className="w-3.5 h-3.5 bg-blue-400 rounded-full flex-shrink-0 mt-1.5"></div>
+                  <div className="flex-1">
+                    <div className="font-medium text-blue-400">Branch Office:</div>
+                    <div className="text-slate-400 text-xs">#16-116/145/B, Mallareddy Nagar Colony, Bheeram Guda, R.C.Puram, Patancheru, Hyderabad</div>
+                  </div>
+                </div>
               </li>
             </ul>
           </div>
