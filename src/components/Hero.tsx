@@ -52,14 +52,14 @@ export default function Hero() {
           </div>
 
           {/* Right - Visual */}
-          <div className="relative animate-fade-in-right delay-200 hidden lg:flex lg:justify-center lg:pt-12">
-            <div className="relative w-full max-w-sm">
+          <div className="relative animate-fade-in-right delay-200 hidden lg:block">
+            <div className="relative w-full aspect-square max-w-md mx-auto">
               {/* Rotating ring */}
               <div className="absolute inset-0 rounded-full border-2 border-dashed border-blue-500/20 animate-spin" style={{ animationDuration: '20s' }}></div>
               <div className="absolute inset-8 rounded-full border-2 border-dashed border-green-500/20 animate-spin" style={{ animationDuration: '15s', animationDirection: 'reverse' }}></div>
 
               {/* Center card */}
-              <div className="relative glass rounded-3xl flex flex-col items-center justify-center p-8 text-center aspect-square flex items-center justify-center">
+              <div className="absolute inset-16 glass rounded-3xl flex flex-col items-center justify-center p-6 text-center">
                 <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-600 to-green-600 flex items-center justify-center mb-4 shadow-2xl shadow-blue-500/30">
                   <span className="text-white font-black text-3xl">M</span>
                 </div>
