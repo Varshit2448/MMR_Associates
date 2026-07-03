@@ -21,7 +21,7 @@ const services = [
   { icon: Hash, title: 'LEI Registration', desc: 'Legal Entity Identifier registration and renewal for corporate entities.' },
   { icon: Briefcase, title: 'PF & ESI Registrations & Returns', desc: 'Provident Fund and ESI registration, compliance, and return filing services.' },
   { icon: Building2, title: 'PT Registrations & Returns', desc: 'Professional Tax registration and periodic return filing for businesses.' },
-  { icon: ShieldCheck, title: 'Labour & Food Licence', desc: 'Labour license and FSSAI food license registration and renewal services.' },
+  { icon: ShieldCheck, title: 'Labour & Food License', desc: 'Labour license and FSSAI food license registration and renewal services.' },
   { icon: Store, title: 'Trade License & IE Code', desc: 'Trade license and Import Export Code registration for businesses.' },
   { icon: Award, title: 'MSME & Halal Certificate', desc: 'MSME registration and Halal certification assistance for businesses.' },
   { icon: BookOpen, title: 'Accounting & Bookkeeping', desc: 'Professional accounting and bookkeeping services to keep your finances organized.' },
