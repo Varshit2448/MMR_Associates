@@ -40,7 +40,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center gap-2 sm:gap-3 group cursor-pointer flex-shrink-0" onClick={() => handleNavClick('Home', '#home')}>
+          <div className="flex items-center gap-2 sm:gap-3 group cursor-pointer flex-shrink-0 -ml-2 sm:-ml-1" onClick={() => handleNavClick('Home', '#home')}>
             <img 
               src="/mmr-logo-3d.webp" 
               alt="MMR Associates Logo" 
