@@ -27,9 +27,11 @@ export default function Footer() {
           {/* Brand */}
           <div className="sm:col-span-2 md:col-span-1">
             <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
-              <div className="w-8 sm:w-10 h-8 sm:h-10 rounded-lg bg-gradient-to-br from-blue-600 to-green-600 flex items-center justify-center shadow-lg flex-shrink-0">
-                <span className="text-white font-black text-xs sm:text-sm">M</span>
-              </div>
+              <img 
+                src="/mmr-logo.webp" 
+                alt="MMR Associates Logo" 
+                className="w-8 sm:w-10 h-8 sm:h-10 object-contain flex-shrink-0"
+              />
               <div>
                 <div className="text-white font-bold text-sm sm:text-lg leading-tight">MMR Associates</div>
                 <div className="text-blue-400 text-xs tracking-widest uppercase line-clamp-1">Tax Consultants, Auditors & Legal Advisors</div>
