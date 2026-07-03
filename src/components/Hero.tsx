@@ -17,7 +17,7 @@ export default function Hero() {
               <span className="text-gradient">Tax & Compliance</span> Solutions
             </h1>
 
-            <p className="text-sm sm:text-base lg:text-lg text-slate-300 leading-relaxed max-w-xl animate-fade-in-up delay-200">
+            <p className="text-xs sm:text-sm lg:text-base text-slate-300 leading-relaxed max-w-xl animate-fade-in-up delay-200">
               MMR Associates delivers comprehensive tax consultancy, GST services, registrations, and accounting solutions with precision, integrity, and a commitment to your financial success.
             </p>
 
