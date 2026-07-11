@@ -46,9 +46,9 @@ export default function Navbar() {
               alt="MMR Associates Logo" 
               className="w-8 sm:w-10 h-8 sm:h-10 object-contain group-hover:opacity-80 transition-opacity duration-300"
             />
-            <div className="hidden sm:block">
-              <div className="text-white font-bold text-base sm:text-lg leading-none tracking-wide">MMR Associates</div>
-              <div className="text-blue-400 text-xs font-medium tracking-widest uppercase line-clamp-1">Tax Consultants, Auditors & Legal Advisors</div>
+            <div className="block">
+              <div className="text-white font-bold text-xs sm:text-base lg:text-lg leading-none tracking-wide">MMR Associates</div>
+              <div className="text-blue-400 text-xs font-medium tracking-widest uppercase line-clamp-1 hidden xs:block">Tax Consultants, Auditors & Legal Advisors</div>
             </div>
           </div>
 
