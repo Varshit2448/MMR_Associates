@@ -8,7 +8,7 @@ const values = [
 
 const highlights = [
   'Experienced tax professionals',
-  'End-to-end compliance solutions',
+  'End-to-end Compliance Solutions',
   'Timely and accurate filings',
   'Personalized client support',
   'Transparent pricing',

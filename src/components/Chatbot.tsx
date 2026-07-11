@@ -26,7 +26,7 @@ const knowledgeBase: { keywords: string[]; response: string }[] = [
   },
   {
     keywords: ['labour', 'food licence', 'fssai', 'food license'],
-    response: 'Labour & Food Licence: We assist with Labour License (required for businesses employing workers) and FSSAI Food License (mandatory for any business involved in food production, storage, distribution, or sale). We handle both fresh applications and renewals.',
+    response: 'Labour & Food License: We assist with Labour License (required for businesses employing workers) and FSSAI Food License (mandatory for any business involved in food production, storage, distribution, or sale). We handle both fresh applications and renewals.',
   },
   {
     keywords: ['trade license', 'ie code', 'import export', 'trade licence'],
@@ -74,7 +74,7 @@ const knowledgeBase: { keywords: string[]; response: string }[] = [
   },
   {
     keywords: ['services', 'what do you', 'offer', 'help'],
-    response: 'We offer 15+ services including:\n• Income Tax Return Filing\n• GST Registration & Returns\n• LEI Registration\n• PF & ESI Registrations\n• PT Registrations\n• Labour & Food Licence\n• Trade License & IE Code\n• MSME & Halal Certificate\n• Accounting & Bookkeeping\n• DSC (Digital Signature)\n• LLP/PVT/Firm/Society Registrations\n• Barcode & Trademark\n• Appeals & Scrutiny\n• MCA Matters\n\nWhich one would you like to know more about?',
+    response: 'We offer 15+ services including:\n• Income Tax Return Filing\n• GST Registration & Returns\n• LEI Registration\n• PF & ESI Registrations\n• PT Registrations\n• Labour & Food License\n• Trade License & IE Code\n• MSME & Halal Certificate\n• Accounting & Bookkeeping\n• DSC (Digital Signature)\n• LLP/PVT/Firm/Society Registrations\n• Barcode & Trademark\n• Appeals & Scrutiny\n• MCA Matters\n\nWhich one would you like to know more about?',
   },
   {
     keywords: ['thank', 'thanks'],
