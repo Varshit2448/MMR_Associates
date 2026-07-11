@@ -1,45 +1,17 @@
 import { useState } from 'react';
-import { Phone, Mail, MapPin, Clock, Send, MessageCircle, CheckCircle2, AlertCircle } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Send, MessageCircle, CheckCircle2 } from 'lucide-react';
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
-  const [error, setError] = useState('');
-  const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({ name: '', email: '', phone: '', message: '' });
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setError('');
-    setLoading(true);
-
-    try {
-      const response = await fetch('/api/send-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(form),
-      });
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        setError(data.message || 'Failed to send email. Please try again.');
-        setLoading(false);
-        return;
-      }
-
-      setSubmitted(true);
+    setSubmitted(true);
+    setTimeout(() => {
+      setSubmitted(false);
       setForm({ name: '', email: '', phone: '', message: '' });
-      setTimeout(() => {
-        setSubmitted(false);
-      }, 5000);
-    } catch (err) {
-      setError('An error occurred. Please try again later.');
-      console.error('Email error:', err);
-    } finally {
-      setLoading(false);
-    }
+    }, 3000);
   };
 
   const contactInfo = [
@@ -152,12 +124,6 @@ export default function Contact() {
               ) : (
                 <>
                   <h3 className="text-2xl font-bold text-slate-900 mb-6">Send Us a Message</h3>
-                  {error && (
-                    <div className="mb-4 p-4 rounded-xl bg-red-50 border border-red-200 flex items-start gap-3">
-                      <AlertCircle size={20} className="text-red-600 flex-shrink-0 mt-0.5" />
-                      <p className="text-red-800 text-sm">{error}</p>
-                    </div>
-                  )}
                   <div className="space-y-5">
                     <div>
                       <label className="block text-slate-700 text-sm font-medium mb-2">Your Name</label>
@@ -207,11 +173,10 @@ export default function Contact() {
                     </div>
                     <button
                       type="submit"
-                      disabled={loading}
-                      className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-500 hover:to-green-500 disabled:from-slate-400 disabled:to-slate-400 text-white px-6 py-3.5 rounded-xl font-semibold transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/30 disabled:shadow-none cta-button"
+                      className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-500 hover:to-green-500 text-white px-6 py-3.5 rounded-xl font-semibold transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/30 cta-button"
                     >
                       <Send size={18} />
-                      {loading ? 'Sending...' : 'Send Message'}
+                      Send Message
                     </button>
                   </div>
                 </>
