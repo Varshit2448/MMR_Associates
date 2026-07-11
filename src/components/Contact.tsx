@@ -1,46 +1,4 @@
-import { useState } from 'react';
-import { Phone, Mail, MapPin, Clock, Send, MessageCircle, CheckCircle2, AlertCircle } from 'lucide-react';
-
-export default function Contact() {
-  const [submitted, setSubmitted] = useState(false);
-  const [error, setError] = useState('');
-  const [loading, setLoading] = useState(false);
-  const [form, setForm] = useState({ name: '', email: '', phone: '', message: '' });
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setError('');
-    setLoading(true);
-
-    try {
-      const response = await fetch('/api/send-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(form),
-      });
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        setError(data.message || 'Failed to send email. Please try again.');
-        setLoading(false);
-        return;
-      }
-
-      setSubmitted(true);
-      setForm({ name: '', email: '', phone: '', message: '' });
-      setTimeout(() => {
-        setSubmitted(false);
-      }, 5000);
-    } catch (err) {
-      setError('An error occurred. Please try again later.');
-      console.error('Email error:', err);
-    } finally {
-      setLoading(false);
-    }
-  };
+import { Phone, Mail, MapPin, Clock, MessageCircle } from 'lucide-react';
 
   const contactInfo = [
     { icon: Phone, label: 'Phone', value: '8106130227', href: 'tel:8106130227' },
@@ -79,8 +37,8 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12">
-          {/* Contact Info */}
+        <div className="max-w-4xl mx-auto">
+          {/* Contact Details */}
           <div className="reveal-left space-y-4 sm:space-y-6">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
               {contactInfo.map((info) => (
@@ -135,89 +93,7 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Form */}
-          <div className="reveal-right">
-            <form
-              onSubmit={handleSubmit}
-              className="bg-white rounded-2xl p-8 shadow-2xl border border-slate-100"
-            >
-              {submitted ? (
-                <div className="flex flex-col items-center justify-center py-16 text-center">
-                  <div className="w-20 h-20 rounded-full bg-green-100 flex items-center justify-center mb-4 animate-scale-in">
-                    <CheckCircle2 size={40} className="text-green-600" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-slate-900 mb-2">Thank You!</h3>
-                  <p className="text-slate-600">Your message has been sent. We'll get back to you soon.</p>
-                </div>
-              ) : (
-                <>
-                  <h3 className="text-2xl font-bold text-slate-900 mb-6">Send Us a Message</h3>
-                  {error && (
-                    <div className="mb-4 p-4 rounded-xl bg-red-50 border border-red-200 flex items-start gap-3">
-                      <AlertCircle size={20} className="text-red-600 flex-shrink-0 mt-0.5" />
-                      <p className="text-red-800 text-sm">{error}</p>
-                    </div>
-                  )}
-                  <div className="space-y-5">
-                    <div>
-                      <label className="block text-slate-700 text-sm font-medium mb-2">Your Name</label>
-                      <input
-                        type="text"
-                        required
-                        value={form.name}
-                        onChange={(e) => setForm({ ...form, name: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all duration-300 text-slate-900"
-                        placeholder="Enter your name"
-                      />
-                    </div>
-                    <div className="grid sm:grid-cols-2 gap-4">
-                      <div>
-                        <label className="block text-slate-700 text-sm font-medium mb-2">Email</label>
-                        <input
-                          type="email"
-                          required
-                          value={form.email}
-                          onChange={(e) => setForm({ ...form, email: e.target.value })}
-                          className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all duration-300 text-slate-900"
-                          placeholder="you@email.com"
-                        />
-                      </div>
-                      <div>
-                        <label className="block text-slate-700 text-sm font-medium mb-2">Phone</label>
-                        <input
-                          type="tel"
-                          required
-                          value={form.phone}
-                          onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                          className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all duration-300 text-slate-900"
-                          placeholder="Your phone"
-                        />
-                      </div>
-                    </div>
-                    <div>
-                      <label className="block text-slate-700 text-sm font-medium mb-2">Message</label>
-                      <textarea
-                        required
-                        rows={4}
-                        value={form.message}
-                        onChange={(e) => setForm({ ...form, message: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all duration-300 text-slate-900 resize-none"
-                        placeholder="How can we help you?"
-                      />
-                    </div>
-                    <button
-                      type="submit"
-                      disabled={loading}
-                      className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-500 hover:to-green-500 disabled:from-slate-400 disabled:to-slate-400 text-white px-6 py-3.5 rounded-xl font-semibold transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/30 disabled:shadow-none cta-button"
-                    >
-                      <Send size={18} />
-                      {loading ? 'Sending...' : 'Send Message'}
-                    </button>
-                  </div>
-                </>
-              )}
-            </form>
-          </div>
+
         </div>
       </div>
     </section>
