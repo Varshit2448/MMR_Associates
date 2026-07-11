@@ -60,9 +60,11 @@ export default function Hero() {
 
               {/* Center card */}
               <div className="absolute inset-16 glass rounded-3xl flex flex-col items-center justify-center p-6 text-center">
-                <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-600 to-green-600 flex items-center justify-center mb-4 shadow-2xl shadow-blue-500/30">
-                  <span className="text-white font-black text-3xl">M</span>
-                </div>
+                <img 
+                  src="/mmr-logo-3d.webp" 
+                  alt="MMR Associates Logo" 
+                  className="w-24 h-24 object-contain mb-4 drop-shadow-2xl"
+                />
                 <div className="text-white font-bold text-xl">MMR Associates</div>
                 <div className="text-blue-300 text-sm mt-1">Tax & Compliance</div>
                 <div className="mt-4 flex gap-2">
